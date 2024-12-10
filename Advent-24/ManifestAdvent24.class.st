@@ -13,12 +13,12 @@ Class {
 ManifestAdvent24 class >> ruleCodeCruftLeftInMethodsRuleV1FalsePositive [
 
 	<ignoreForCoverage>
-	^ #(#(#(#RGMethodDefinition #(#A24Day9 #testPart2 #false)) #'2024-12-09T17:11:52.800403+00:00') )
+	^ #(#(#(#RGMethodDefinition #(#A24Day09 #testPart2 #false)) #'2024-12-09T17:11:52.800403+00:00') )
 ]
 
 { #category : 'code-critics' }
 ManifestAdvent24 class >> ruleModifiesCollectionRuleV1FalsePositive [
 
 	<ignoreForCoverage>
-	^ #(#(#(#RGMethodDefinition #(#A24Day8 #testPart2 #false)) #'2024-12-08T08:43:12.856238+00:00') )
+	^ #(#(#(#RGMethodDefinition #(#A24Day08 #testPart2 #false)) #'2024-12-08T08:43:12.856238+00:00') )
 ]

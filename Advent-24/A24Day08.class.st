@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day8',
+	#name : 'A24Day08',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : 'running' }
-A24Day8 >> sample [
+A24Day08 >> sample [
 	^ '............
 ........0...
 .....0......
@@ -25,7 +25,7 @@ A24Day8 >> sample [
 ]
 
 { #category : 'running' }
-A24Day8 >> setUp [
+A24Day08 >> setUp [
 	super initialize.
 	input := A24Input day: 8.
 	"input := self sample."
@@ -33,7 +33,7 @@ A24Day8 >> setUp [
 ]
 
 { #category : 'tests' }
-A24Day8 >> testPart2 [
+A24Day08 >> testPart2 [
 	| map positions antenas answer rect |
 	
 	map := DataFrame withRows: input lines.

@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day5',
+	#name : 'A24Day05',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,14 +9,14 @@ Class {
 }
 
 { #category : 'running' }
-A24Day5 >> setUp [
+A24Day05 >> setUp [
 	super initialize.
 	input := A24Input day: 5.
 	Transcript show: input; cr.
 ]
 
 { #category : 'running' }
-A24Day5 >> testPart1 [
+A24Day05 >> testPart1 [
 
 	| number rule pageList pages parser parsedInput rules answer |
 	number :=  #digit asPParser plus token ==> [ :token | token value asNumber ].
@@ -44,7 +44,7 @@ A24Day5 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day5 >> testPart2 [
+A24Day05 >> testPart2 [
 
 	| number rule pageList pages parser parsedInput rules manuals isValid fixManual answer |
 	number :=  #digit asPParser plus token ==> [ :token | token value asNumber ].

@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day3',
+	#name : 'A24Day03',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,14 +9,14 @@ Class {
 }
 
 { #category : 'running' }
-A24Day3 >> setUp [
+A24Day03 >> setUp [
 	super initialize.
 	input := A24Input day: 3.
 	Transcript show: input; cr.
 ]
 
 { #category : 'running' }
-A24Day3 >> testPart1 [
+A24Day03 >> testPart1 [
 	| number mul corrector answer |
 	"
 	Metacello new
@@ -37,7 +37,7 @@ A24Day3 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day3 >> testPart2 [
+A24Day03 >> testPart2 [
 
 	| number mul do dont corrector answer |
 	number :=  #digit asPParser plus token ==> [ :token | token value asNumber ].

@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day4',
+	#name : 'A24Day04',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,14 +9,14 @@ Class {
 }
 
 { #category : 'running' }
-A24Day4 >> setUp [
+A24Day04 >> setUp [
 	super initialize.
 	input := A24Input day: 4.
 	Transcript show: input; cr.
 ]
 
 { #category : 'running' }
-A24Day4 >> testPart1 [
+A24Day04 >> testPart1 [
 	"
 	Metacello new
 		baseline: 'DataFrame';
@@ -58,7 +58,7 @@ A24Day4 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day4 >> testPart2 [
+A24Day04 >> testPart2 [
 	| matrix countAtPosition a b answer |
 
 	Transcript cr; show: input; cr.

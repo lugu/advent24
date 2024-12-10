@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day9',
+	#name : 'A24Day09',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,13 +9,13 @@ Class {
 }
 
 { #category : 'running' }
-A24Day9 >> sample [
+A24Day09 >> sample [
 	^ '2333133121414131402
 '
 ]
 
 { #category : 'running' }
-A24Day9 >> setUp [
+A24Day09 >> setUp [
 	super initialize.
 	input := A24Input day: 9.
 	"input := self sample."
@@ -23,7 +23,7 @@ A24Day9 >> setUp [
 ]
 
 { #category : 'running' }
-A24Day9 >> testPart1 [
+A24Day09 >> testPart1 [
 	| diskmap blocklist lastIndex answer cleanlist |
 	diskmap := input allButLast asArray collect: [ :each | each asString asNumber ].
 	"A block list is the ordered collection of blocks marked with their file id."
@@ -55,7 +55,7 @@ A24Day9 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day9 >> testPart2 [
+A24Day09 >> testPart2 [
 	| diskmap disk files freeSpaces blocklist answer cleanlist check sampleBlockList mapcheck cleanCheck cleanlistAnswer |
 	diskmap := input allButLast asArray collect: [ :each | each asString asNumber ].
 	disk := A24D9Disk new diskmap: diskmap.

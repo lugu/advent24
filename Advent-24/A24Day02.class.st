@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day2',
+	#name : 'A24Day02',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,14 +9,14 @@ Class {
 }
 
 { #category : 'running' }
-A24Day2 >> setUp [
+A24Day02 >> setUp [
 	super initialize.
 	input := A24Input day: 2.
 	Transcript show: input; cr.
 ]
 
 { #category : 'running' }
-A24Day2 >> testPart1 [
+A24Day02 >> testPart1 [
 	| numbers valid first diff answer |
 
 	numbers := input lines collect: [ :aLine | 
@@ -45,7 +45,7 @@ A24Day2 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day2 >> testPart2 [
+A24Day02 >> testPart2 [
 	| numbers testIfValid diff answer |
 
 	numbers := input lines collect: [ :aLine | 

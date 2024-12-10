@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day6',
+	#name : 'A24Day06',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,14 +9,14 @@ Class {
 }
 
 { #category : 'running' }
-A24Day6 >> setUp [
+A24Day06 >> setUp [
 	super initialize.
 	input := A24Input day: 6.
 	Transcript show: input; cr.
 ]
 
 { #category : 'running' }
-A24Day6 >> testPart1 [
+A24Day06 >> testPart1 [
 
 	| map rect positions direction position moveForward moves answer |
 	map := DataFrame withRows: input lines.
@@ -66,7 +66,7 @@ A24Day6 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day6 >> testPart2 [
+A24Day06 >> testPart2 [
 
 	| map rect direction origin savePosition containsPosition oneStep isLoop positions answer |
 	map := DataFrame withRows: input lines.

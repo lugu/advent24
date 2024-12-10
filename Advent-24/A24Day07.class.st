@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day7',
+	#name : 'A24Day07',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : 'running' }
-A24Day7 >> sample [
+A24Day07 >> sample [
 	^ '190: 10 19
 3267: 81 40 27
 83: 17 5
@@ -22,7 +22,7 @@ A24Day7 >> sample [
 ]
 
 { #category : 'running' }
-A24Day7 >> setUp [
+A24Day07 >> setUp [
 	super initialize.
 	input := A24Input day: 7.
 	"input := self sample."
@@ -30,7 +30,7 @@ A24Day7 >> setUp [
 ]
 
 { #category : 'tests' }
-A24Day7 >> testPart1 [
+A24Day07 >> testPart1 [
 	| number parser equation equations answer |
 	number :=  #digit asPParser plus token ==> [ :token | token value asNumber ].
 	equation := number, (':' asPParser trim) , (number separatedBy: ' ' asPParser) withoutSeparators

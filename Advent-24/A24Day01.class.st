@@ -1,5 +1,5 @@
 Class {
-	#name : 'A24Day1',
+	#name : 'A24Day01',
 	#superclass : 'TestCase',
 	#instVars : [
 		'input'
@@ -9,14 +9,14 @@ Class {
 }
 
 { #category : 'running' }
-A24Day1 >> setUp [
+A24Day01 >> setUp [
 	super initialize.
 	input := A24Input day: 1.
 	Transcript show: input; cr.
 ]
 
 { #category : 'running' }
-A24Day1 >> testPart1 [
+A24Day01 >> testPart1 [
 	| numbers left right distances answer |
 
 	numbers := input lines collect: [ :aLine | 
@@ -35,7 +35,7 @@ A24Day1 >> testPart1 [
 ]
 
 { #category : 'running' }
-A24Day1 >> testPart2 [
+A24Day01 >> testPart2 [
 	| numbers left right distances rightIndex answer |
 	numbers := input lines collect: [ :aLine | 
 		(aLine substrings: ' ') collect: [:each | each asNumber]
