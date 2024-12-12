@@ -40,10 +40,19 @@ OOOOO'
 ]
 
 { #category : 'running' }
+A24Day12 >> sample3 [
+	^ 'EEEEE
+EXXXX
+EEEEE
+EXXXX
+EEEEE'
+]
+
+{ #category : 'running' }
 A24Day12 >> setUp [
 	super initialize.
 	input := A24Input day: 12.
-	"input := self sample2."
+	"input := self sample3."
 	Transcript cr; show: input; cr.
 ]
 
@@ -63,6 +72,41 @@ A24Day12 >> testPart1 [
 			perimeter := perimeter + (4 - sharedNb).
 		].
 		{ surface. perimeter. }
+	].
+	answer := orders inject: 0 into: [ :price :order | price + (order first * order second) ].
+	answer traceCr.
+]
+
+{ #category : 'tests' }
+A24Day12 >> testPart2 [
+	| map areas orders answer |
+	map := A24D12Map input: input.
+	areas := map areas.
+	orders := areas asArray collect: [ :area |
+		| corners surface |
+		surface := area size.
+		"Count how many angles a plot contributes.
+		There are two cases: outer corner and inner corner
+					.o.       ox.
+					ox.  and  xx.
+					...       ...
+		"
+		corners := (area asArray collect: [ :point |
+			| count direction p p1 p2 p3 |
+			count := 0.
+			direction := 1@0.
+			p := map at: point.
+			4 timesRepeat: [
+				direction := direction leftRotated.
+				p1 := map at: (point + direction).
+				p2 := map at: (point + direction leftRotated).
+				p3 := map at: (point + direction + direction leftRotated).
+				((p1 ~= p) & (p2 ~=p)) ifTrue: [ count := count + 1 ].
+				((p1 = p) & (p2 =p) & (p ~= p3)) ifTrue: [ count := count + 1 ].
+			].
+			count.
+		]) sum.
+		{ surface. corners. }
 	].
 	answer := orders inject: 0 into: [ :price :order | price + (order first * order second) ].
 	answer traceCr.

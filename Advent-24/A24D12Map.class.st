@@ -39,6 +39,15 @@ A24D12Map >> areas [
 ]
 
 { #category : 'accessing' }
+A24D12Map >> at: aPoint [
+
+	"return a symbol even if the point isn't on the map"
+	^ (self rect containsPoint: aPoint)
+		ifTrue: [ map at: aPoint x at: aPoint y ]
+		ifFalse: [ $% ] "some charater not in the map"
+]
+
+{ #category : 'accessing' }
 A24D12Map >> growArea: area from: pot [
 	"For each potential new neightboor, try to add it."
 	((self potsNextTo: pot)
