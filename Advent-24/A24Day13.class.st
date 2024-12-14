@@ -60,7 +60,6 @@ A24Day13 >> testPart1 [
 	machines := parser parse: input.
 	answer := (machines collect: [ :each | each tokensForTheprize ]) sum.
 	answer traceCr.
-	self halt
 ]
 
 { #category : 'tests' }
@@ -88,5 +87,4 @@ A24Day13 >> testPart2 [
 	machines := parser parse: input.
 	answer := (machines collect: [ :each | each tokensForTheprize2 ]) sum.
 	answer traceCr.
-	self halt
 ]
